@@ -202,7 +202,7 @@ public class EntityPlayer extends Entity {
 		
 		ExtraDebugRenderer extdebug = new ExtraDebugRenderer();
 		if(world.debug) {
-			extdebug.drawString(String.format("Health:%s\nFuel:%s\nPos:[%s,%s]", health, fuel, Math.round(body.getPosition().x), Math.round(body.getPosition().y)), new Vector2(body.getPosition().x+16, body.getPosition().y+32), Color.WHITE, batch);
+			extdebug.drawString(("Health:"+health+"\nFuel:"+health+"\nPos:["+Math.round(body.getPosition().x)+","+Math.round(body.getPosition().y)+"]"), new Vector2(body.getPosition().x+16, body.getPosition().y+32), Color.WHITE, batch);
 			if(world.nearest != null) {
 				batch.end();
 				extdebug.drawDebugLine(body.getWorldCenter(), world.nearest.getWorldCenter(), batch.getProjectionMatrix());
